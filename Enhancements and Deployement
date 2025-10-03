@@ -1,0 +1,105 @@
+
+1. Backend Output (server.js)
+
+When you run:
+
+`bash
+node server.js
+`
+
+✅ Terminal Output:
+`
+MongoDB connected
+Server running on port 5000
+`
+
+---
+
+ 2. Login API Output (auth.js)
+
+ Request:
+
+`http
+POST /api/auth/login
+Content-Type: application/json
+
+{
+  "email": "riyas@example.com",
+  "password": "123456"
+}
+`
+
+✅ Success Response:
+
+`json
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6..."
+}
+`
+
+❌ Error Response (wrong credentials):
+
+`json
+401 Unauthorized
+"Invalid credentials"
+`
+
+---
+
+ 3. Blog Model Output (GET /api/blogs)
+
+Request:
+
+`http
+GET /api/blogs
+`
+
+✅ Response:
+
+`json
+[
+  {
+    "_id": "652f1d9e8a1b2c0012345678",
+    "title": "My First Blog",
+    "content": "This is the content...",
+    "author": "Riyas",
+    "createdAt": "2025-10-03T12:00:00.000Z",
+    "v": 0
+  }
+]
+`
+
+---
+
+4. Docker Output
+
+When you run:
+
+`bash
+docker build -t blog-backend .
+docker run -p 5000:5000 blog-backend
+`
+
+✅ Terminal Output:
+`
+MongoDB connected
+Server running on port 5000
+`
+
+---
+
+5. Frontend Output (BlogList.jsx)
+
+✅Browser Output:
+
+`html
+<h2>My First Blog</h2>
+<p>This is the content...</p>
+<small>By Riyas</small>
+`
+
+If no blogs are found, the page will be empty or show a fallback message (if added).
+
+---
+
+If you want to test blog creation (POST /api/blogs) or protect routes using JWT, I can help you add that too. Want me to show how to test this using Postman or curl? Or convert this into a neat assignment format? Just say the word!
